@@ -1,4 +1,16 @@
 import { Component } from '@angular/core';
+import jsonfile from './menou/data.json';
+
+export interface data {
+  name?:string
+  surname?:string,
+  age?:number,
+  siblings?:siblings[]
+  }
+
+  export interface siblings{
+    name1?:string,age1?:number,sex1?:string
+  }
 
 @Component({
   selector: 'app-root',
@@ -7,4 +19,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frag';
+  
+  dataObj:any=jsonfile
+  
 }
